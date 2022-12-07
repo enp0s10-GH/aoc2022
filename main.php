@@ -75,6 +75,16 @@ class day2 {
     }
 }
 
+class day3 {
+    public static function toAsciiNum(string $asciiChar): int
+    {
+        $asciiNum = ord(strtoupper($asciiChar)) - ord('A') + 1;
+        if ($asciiChar == strtoupper($asciiChar)) {
+            $asciiNum += 26;
+        }
+        return $asciiNum;
+    }
+}
 class day4 {
     public static function fetchScope(string $scope) {
         $first = explode('-', $scope)[0];
